@@ -13,7 +13,7 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import CityCard from './CityCard.vue';
 
-const apiKey = '7efa332cf48aeb9d2d391a51027f1a71';
+const apiKey = import.meta.env.VITE_API_KEY_OPEN_WEATHER;
 
 const savedCities = ref([]);
 const getCities = async () => {
