@@ -81,9 +81,11 @@ const addCity = () => {
   localStorage.setItem('savedCities', JSON.stringify(savedCities.value));
 
   let query = Object.assign({}, route.query);
+  query.id = locationObj.id;
   delete query.preview;
   router.replace({ query });
 }
+
 const toggleModal = () => {
   modalActive.value = !modalActive.value;
 }
